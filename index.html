@@ -34,35 +34,29 @@
 
 <div id="app">
 <h2>Categories</h2>
-<button class="collapsible" @click="toggleCollapse">{{ cat_produce }}</button>
+<button class="collapsible" @click="toggleCollapse" ref="el">{{ cat_produce }}</button>
 <div class="content">
-  <p>
   <ul>
 	<li>{{ produce_item_1 }}</li>
 	<li>{{ produce_item_2 }}</li>
 	<li>{{ produce_item_3 }}</li>
   </ul>
-  </p>
 </div>
-<button class="collapsible" @click="toggleCollapse">{{ cat_baked }}</button>
+<button class="collapsible" @click="toggleCollapse" ref="el">{{ cat_baked }}</button>
 <div class="content">
-  <p>
   <ul>
 	<li>{{ baked_item_1 }}</li>
 	<li>{{ baked_item_2 }}</li>
 	<li>{{ baked_item_3 }}</li>
   </ul>
-  </p>
 </div>
-<button class="collapsible" @click="toggleCollapse">{{ cat_meat }}</button>
+<button class="collapsible" @click="toggleCollapse" ref="el">{{ cat_meat }}</button>
 <div class="content">
-  <p>
   <ul>
 	<li>{{ meat_item_1 }}</li>
 	<li>{{ meat_item_2 }}</li>
 	<li>{{ meat_item_3 }}</li>
   </ul>
-  </p>
 </div>
 </div>
 
@@ -85,7 +79,7 @@
       },
 	  methods: {
         toggleCollapse() {
-		  var collapsibleContent = this.nextElementSibling;
+		  var collapsibleContent = this.$refs.el.nextElementSibling;
 		  if (collapsibleContent.style.maxHeight){
           collapsibleContent.style.maxHeight = null;
           } else {

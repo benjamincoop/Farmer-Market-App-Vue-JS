@@ -34,7 +34,7 @@
 
 <div id="app">
 <h2>Categories</h2>
-<button class="collapsible" @click="toggleCollapse" ref="el">{{ cat_produce }}</button>
+<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ cat_produce }}</button>
 <div class="content">
   <ul>
 	<li>{{ produce_item_1 }}</li>
@@ -42,7 +42,7 @@
 	<li>{{ produce_item_3 }}</li>
   </ul>
 </div>
-<button class="collapsible" @click="toggleCollapse" ref="el">{{ cat_baked }}</button>
+<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ cat_baked }}</button>
 <div class="content">
   <ul>
 	<li>{{ baked_item_1 }}</li>
@@ -50,7 +50,7 @@
 	<li>{{ baked_item_3 }}</li>
   </ul>
 </div>
-<button class="collapsible" @click="toggleCollapse" ref="el">{{ cat_meat }}</button>
+<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ cat_meat }}</button>
 <div class="content">
   <ul>
 	<li>{{ meat_item_1 }}</li>
@@ -78,8 +78,8 @@
 		meat_item_3: 'Fish'
       },
 	  methods: {
-        toggleCollapse() {
-		  var collapsibleContent = this.$refs.el.nextElementSibling;
+        toggleCollapse(e) {
+		  var collapsibleContent = e.target.nextElementSibling;
 		  if (collapsibleContent.style.maxHeight){
           collapsibleContent.style.maxHeight = null;
           } else {

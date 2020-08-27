@@ -1,21 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My first Vue app</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<title>Farm's Market Vue App</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
 </head>
 <body>
-  <div id="content">
-    {{ message }}
-  </div>
 
-  <script>
+<div id="app">
+<h2>Categories</h2>
+<button class="collapsible" @click="toggleCollapse">{{ cat_produce }}</button>
+<div class="content">
+  <p>
+  <ul>
+	<li>{{ produce_item_1 }}</li>
+	<li>{{ produce_item_2 }}</li>
+	<li>{{ produce_item_3 }}</li>
+  </ul>
+  </p>
+</div>
+<button class="collapsible" @click="toggleCollapse">{{ cat_baked }}</button>
+<div class="content">
+  <p>
+  <ul>
+	<li>{{ baked_item_1 }}</li>
+	<li>{{ baked_item_2 }}</li>
+	<li>{{ baked_item_3 }}</li>
+  </ul>
+  </p>
+</div>
+<button class="collapsible" @click="toggleCollapse">{{ cat_meat }}</button>
+<div class="content">
+  <p>
+  <ul>
+	<li>{{ meat_item_1 }}</li>
+	<li>{{ meat_item_2 }}</li>
+	<li>{{ meat_item_3 }}</li>
+  </ul>
+  </p>
+</div>
+</div>
+
+<script>
     var app = new Vue({
-      el: '#content',
+      el: '#app',
       data: {
-        message: 'Hello World!'
-      }
+        cat_produce: 'Produce',
+		cat_baked: 'Baked Goods',
+		cat_meat: 'Meat, Poultry, and Fish',		
+		produce_item_1: 'Fruits',
+		produce_item_2: 'Leafy Vegetables',
+		produce_item_3: 'Tubers and Non-Leafy Vegetables',
+		baked_item_1: 'Cakes',
+		baked_item_2: 'Cookies',
+		baked_item_3: 'Pies',
+		meat_item_1: 'Meat',
+		meat_item_2: 'Poultry',
+		meat_item_3: 'Fish'
+      },
+	  methods: {
+        toggleCollapse() {
+		  var collapsibleContent = this.nextElementSibling;
+		  if (collapsibleContent.style.maxHeight){
+          collapsibleContent.style.maxHeight = null;
+          } else {
+            collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+          } 
+        }
+	  }
     })
   </script>
+
 </body>
 </html>

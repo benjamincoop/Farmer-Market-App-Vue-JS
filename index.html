@@ -1,6 +1,21 @@
+<!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
 <body>
-<h1>test</h1>
+  <div id="content">
+    {{ message }}
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#content',
+      data: {
+        message: 'Hello World!'
+      }
+    })
+  </script>
 </body>
 </html>

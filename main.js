@@ -3,16 +3,23 @@ var app = new Vue({
   data: {
 	cat_produce: 'Fresh Produce',
 	cat_baked: 'Baked Goods',
-	cat_meat: 'Animal Products',		
+	cat_animal: 'Animal Products',		
 	produce_item_1: 'Fruits',
-	produce_item_2: 'Leafy Vegetables',
-	produce_item_3: 'Tubers and Non-Leafy Vegetables',
+	produce_item_2: 'Green Vegetables',
+	produce_item_3: 'Other Vegetables',
 	baked_item_1: 'Cakes',
 	baked_item_2: 'Cookies',
 	baked_item_3: 'Pies',
-	meat_item_1: 'Meat',
-	meat_item_2: 'Poultry',
-	meat_item_3: 'Fish'
+	subcat_meat: 'Meat',
+	subcat_poultry: 'Poultry',
+	subcat_seafood: 'Seafood',
+	meat_item_1: 'Beef',
+	meat_item_2: 'Pork',
+	poultry_item_1: 'Chicken',
+	poultry_item_2: 'Turkey',
+	seafood_item_1: 'Fish',
+	seafood_item_2: 'Other',
+	
   },
   methods: {
 	toggleCollapse(e) {
@@ -20,7 +27,7 @@ var app = new Vue({
 	  if (collapsibleContent.style.maxHeight){
 	  collapsibleContent.style.maxHeight = null;
 	  } else {
-		collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+		collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight*2 + 'px';
 	  } 
 	}
   }

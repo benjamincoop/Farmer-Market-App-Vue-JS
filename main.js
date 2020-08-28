@@ -1,9 +1,9 @@
 var app = new Vue({
   el: '#app',
   data: {
-	cat_produce: 'Produce',
+	cat_produce: 'Fresh Produce',
 	cat_baked: 'Baked Goods',
-	cat_meat: 'Meat, Poultry, and Fish',		
+	cat_meat: 'Animal Products',		
 	produce_item_1: 'Fruits',
 	produce_item_2: 'Leafy Vegetables',
 	produce_item_3: 'Tubers and Non-Leafy Vegetables',

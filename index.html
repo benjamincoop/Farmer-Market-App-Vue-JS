@@ -1,57 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Farm's Market Vue App</title>
-		<script src="vue.js"></script>
-		<link rel="stylesheet" href="styles.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-		<div id="app">
-			<h3>Product Categories</h3>
-			<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ cat_produce }}</button>
-			<div class="content">
-			  <ul>
-				<li>{{ produce_item_1 }}</li>
-				<li>{{ produce_item_2 }}</li>
-				<li>{{ produce_item_3 }}</li>
-			  </ul>
-			</div>
-			<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ cat_baked }}</button>
-			<div class="content">
-			  <ul>
-				<li>{{ baked_item_1 }}</li>
-				<li>{{ baked_item_2 }}</li>
-				<li>{{ baked_item_3 }}</li>
-			  </ul>
-			</div>
-			<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ cat_animal }}</button>
-			<div class="content">
-				<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ subcat_meat }}</button>
-				<div class="content">
-				<ul>
-					<li>{{ meat_item_1 }}</li>
-					<li>{{ meat_item_2 }}</li>
-				</ul>
-				</div>
-				<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ subcat_poultry }}</button>
-				<div class="content">
-				<ul>
-					<li>{{ poultry_item_1 }}</li>
-					<li>{{ poultry_item_2 }}</li>
-				</ul>
-				</div>
-				<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ subcat_seafood }}</button>
-				<div class="content">
-				<ul>
-					<li>{{ seafood_item_1 }}</li>
-					<li>{{ seafood_item_2 }}</li>
-				</ul>
-				</div>
-			</div>
-			<collapsible-category></collapsible-category>
-		</div>
-		
-		<script src="main.js"></script>
-	</body>
+
+<head>
+    <title>Farm's Market Vue App</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="app">
+        <h3>Product Categories</h3>
+        <collapsible-category
+			v-for="cat in categories"
+			v-bind:key="cat.id"
+			v-bind:name="cat.name">
+		</collapsible-category>
+    </div>
+    <script src="main.js"></script>
+</body>
+
 </html>

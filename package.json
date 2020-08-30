@@ -1,0 +1,35 @@
+{
+  "name": "farmersmarket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./main.js",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.2",
+    "html-webpack-plugin": "^4.4.1",
+    "rimraf": "^3.0.2",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "webpack-cli": "^3.3.12",
+    "webpack": "^4.44.1",
+    "webpack-dev-server": "^3.11.0",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjamincoop/Farmer-Market-App-Vue-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjamincoop/Farmer-Market-App-Vue-JS/issues"
+  },
+  "homepage": "https://github.com/benjamincoop/Farmer-Market-App-Vue-JS#readme"
+}

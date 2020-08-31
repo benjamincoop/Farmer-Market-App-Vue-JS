@@ -22,3 +22,26 @@
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
   }
+
+  #menu {
+    background: #002569;
+    height: 50px;
+  }
+
+  #menu_list {
+    list-style-type: none;
+    display: inline-block;
+    top: -20px;
+    position: relative;
+  }
+
+  #menu_list li {
+    display: inline-block;
+    color: white;
+    margin-right: 15px;
+  }
+
+  #kda_logo {
+    height: 40px;
+    margin: 5px;
+  }

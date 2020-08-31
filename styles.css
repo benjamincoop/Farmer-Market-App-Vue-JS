@@ -22,3 +22,44 @@
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
+
+table {
+  border: 2px solid #002569;
+  border-radius: 3px;
+  background-color: #002569;
+  
+}
+
+thead {
+	background-color: #002569;
+	color: #f1ad02;
+}
+
+tbody {
+	background-color: #fff;
+	color: #000000;
+	text-align: left;
+	
+}
+
+th{
+	max-width: 100%;
+	white-space: pre-line;
+	padding: 7px;
+}
+
+.tableTextPaddingDescription{
+	padding:7px;
+	padding-left:0;
+	font-weight:bold;
+}
+
+
+.tableTextPadding{
+	padding:1px;
+	font-weight:400;
+}
+
+.bodyWidth{
+	width: 250px;
+}

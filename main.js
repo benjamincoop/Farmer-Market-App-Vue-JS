@@ -19,6 +19,8 @@ var app = new Vue({
 	poultry_item_2: 'Turkey',
 	seafood_item_1: 'Fish',
 	seafood_item_2: 'Other',
+	questions_on: 'Questions On?',
+	key_contacts: 'Key Contacts',
 	
   },
   methods: {
@@ -30,5 +32,20 @@ var app = new Vue({
 		collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight*2 + 'px';
 	  } 
 	}
+	
   }
+  
+/*   computed: {
+  BoldText: function ()  {
+    return `<strong>Who To Contact:</strong>`
+  }
+} */
+	
+	
+  
+  
+ 
+  
+  
+  
 })

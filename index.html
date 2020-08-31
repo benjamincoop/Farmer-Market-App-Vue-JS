@@ -32,7 +32,7 @@
                     <ul>
                         <li>{{ meat_item_1 }}</li>
                         <li>{{ meat_item_2 }}</li>
-                        <li>{{ meat_item_2 }}</li>
+                        
                     </ul>
 				</div>
 				<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ subcat_poultry }}</button>
@@ -50,8 +50,118 @@
 				</ul>
 				</div>
 			</div>
+			
+			
+			<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ key_contacts }}</button>
+				<div class="content">
+				  <table id="keyContscts" class ="tableHead">
+					<thead >
+						<tr >
+							<th >Questions on?</th>
+							<th>Phone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th >
+								<div class="tableTextPaddingDescription">Food Safety licensing and inspection</div>
+								<div class ="tableTextPadding"> <b>Who To Contact:</b>	KDA Food Safety and Lodging program</div>
+								<div class ="tableTextPadding"><b>Website:</b>	agriculture.ks.gov/foodsafety </div>
+								<div class ="tableTextPadding"><b>Email:</b>	kda.fsl@ks.gov </div>
+							</th>
+							<th>785-564-6767</th>
+						</tr>
+						<tr>
+							<th >
+								<div class ="tableTextPaddingDescription" >Value added product recipe approval, product development, Better Process Control School, HACCP, etc. </div>
+								<div class ="tableTextPadding"><b>Who To Contact:</b>	Kansas State University Value-Added/ Product Development Lab</div>
+								<div class ="tableTextPadding"><b>Website:</b>	www.ksre.ksu.edu/kvaf</div>
+								<div class ="tableTextPadding"><b>Email:</b>	kvafl@ksu.edu</div>
+							</th>
+							<th>785-532-1668</th>
+						</tr>
+						<tr>
+							<th >
+								<div class ="tableTextPaddingDescription">Sales tax information</div>
+								<div class ="tableTextPadding"><b>Who To Contact:</b>	Kansas Department of Revenue</div>
+								<div class ="tableTextPadding"><b>Website:</b>	www.ksrevenue.org/</div>
+								<div class ="tableTextPadding"><b>Email:</b>	tac@kdor.ks.gov</div>
+							</th>
+							<th>785-368-8222</th>
+						</tr>
+						<!-- <tr>
+							<th>Value added product recipe approval, product development, Better Process Control School, HACCP, etc. </th>
+							<th>Kansas State University Value-Added/ Product Development Lab</th>
+							<th>www.ksre.ksu.edu/kvaf</th>
+							<th>kvafl@ksu.edu</th>
+							<th>785-532-1668</th>
+						</tr>
+						<tr>
+							<th>Sales tax information</th>
+							<th>Kansas Department of Revenue</th>
+							<th>www.ksrevenue.org/</th>
+							<th>tac@kdor.ks.gov</th>
+							<th>785-368-8222</th>
+						</tr> -->
+					</tbody>
+				  </table>
+				</div>
+			
+			
+			
+			<!-- <button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ key_contacts }}</button>
+				<div class="content">
+				  <table id="keyContscts" class ="tableHead">
+					<thead >
+						<tr >
+							<th >Questions on?</th>
+							<th>Who to contact</th>
+							<th>Website</th>
+							<th>Email</th>
+							<th>Phone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class = "bodyWidth">Food Safety licensing and inspection</th>
+							<th class = "bodyWidth">KDA Food Safety and Lodging program</th>
+							<th>agriculture.ks.gov/foodsafety</th>
+							<th>kda.fsl@ks.gov</th>
+							<th>785-564-6767</th>
+						</tr>
+						<tr>
+							<th>Value added product recipe approval, product development, Better Process Control School, HACCP, etc. </th>
+							<th>Kansas State University Value-Added/ Product Development Lab</th>
+							<th>www.ksre.ksu.edu/kvaf</th>
+							<th>kvafl@ksu.edu</th>
+							<th>785-532-1668</th>
+						</tr>
+						<tr>
+							<th>Sales tax information</th>
+							<th>Kansas Department of Revenue</th>
+							<th>www.ksrevenue.org/</th>
+							<th>tac@kdor.ks.gov</th>
+							<th>785-368-8222</th>
+						</tr>
+					</tbody>
+				  </table>
+				</div> -->
 		</div>
 		
 		<script src="main.js"></script>
 	</body>
+	
+	<!--<body> 
+		<div id="app">
+			<h3>Key Contacts</h3>
+			<button class="collapsible" v-on:click.self="toggleCollapse($event)">{{ questions_on }}</button>
+				<div class="content">
+				  
+				</div>
+		</div>
+		<script src="main.js"></script>
+		
+	</body>-->
+	
+	
 </html>

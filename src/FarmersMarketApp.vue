@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h3>Product Categories</h3>
+        <h1>Product Categories</h1>
         <collapsible-category
             :categoryName="'Root'"
         ></collapsible-category>

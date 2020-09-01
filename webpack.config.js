@@ -1,6 +1,7 @@
 // Source Here: https://www.freecodecamp.org/news/how-to-create-a-vue-js-app-using-single-file-components-without-the-cli-7e73e5b8244f/
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -38,6 +39,7 @@ module.exports = {
       template: './src/index.html',
     }),
     new VueLoaderPlugin(),
+    new GenerateSW(),
     new webpack.HotModuleReplacementPlugin(),
   ]
 };

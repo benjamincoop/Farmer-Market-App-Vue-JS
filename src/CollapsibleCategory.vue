@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="collapsible" v-on:click.self="open = !open">{{ categoryName }}</button>
+        <button class="collapsible" v-on:click.self="open = !open">{{ categories[categoryName].name }}</button>
         
         <div v-if="open" class="content">
             <ul v-if="categories[categoryName].children.length !== 0">

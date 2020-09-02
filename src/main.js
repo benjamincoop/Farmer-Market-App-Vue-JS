@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import FarmersMarketStore from './farmers_market_store.js'
 import FarmersMarketApp from './FarmersMarketApp.vue';
+import '../service-worker.js'
 import './styles.css';
 
 Vue.use(Vuex);
@@ -17,3 +18,9 @@ new Vue({
   store,
   render: h => h(FarmersMarketApp),
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}

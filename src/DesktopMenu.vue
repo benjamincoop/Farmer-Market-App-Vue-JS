@@ -1,7 +1,7 @@
 <template>
   <div id="desktop-menu">
     <div id="menu">
-      <img id="kda_logo" src="KDALogo_White-Gold.png">
+      <img id="kda_logo" src="../KDALogo_White-Gold.png">
       <ul id="menu_list">
         <li>Home</li>
         <li>Contacts</li>

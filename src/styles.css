@@ -11,13 +11,14 @@
   }
   
   .active, .collapsible:hover {
-    background-color: #512888;
+    background-color: #002569;
     color: white;
   }
   
   .content {
-    padding: 0 18px;
+    padding: 18px;
     /* max-height: 0; */
+    background-color: #002569;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;

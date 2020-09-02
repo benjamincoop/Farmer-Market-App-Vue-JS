@@ -9,7 +9,7 @@
   </div>
   <div id="menu">
     <span style="font-size: 30px; cursor: pointer; color: white; position: relative; top: 2px; margin: 5px;" v-on:click.self="openNav()">&#9776;</span>
-    <img id="kda_logo" src="KDALogo_White-Gold.png">
+    <img id="kda_logo" src="../KDALogo_White-Gold.png">
     </div>
 </div>
 </template>

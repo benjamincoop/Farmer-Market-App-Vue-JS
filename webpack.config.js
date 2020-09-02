@@ -1,16 +1,23 @@
 // Source Here: https://www.freecodecamp.org/news/how-to-create-a-vue-js-app-using-single-file-components-without-the-cli-7e73e5b8244f/
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const {GenerateSW} = require('workbox-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
   entry: './src/main.js',
   module: {
     rules: [
-      { test: /\.js$/, use: 'babel-loader' },
-      { test: /\.vue$/, use: 'vue-loader' },
-      { test: /\.css$/,
+      { 
+        test: /\.js$/,
+        use: 'babel-loader'
+      },
+      { 
+        test: /\.vue$/,
+        use: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
         use: [
           'style-loader',
           {
@@ -24,9 +31,24 @@ module.exports = {
         include: /\.module\.css$/
       },
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ],
         exclude: /\.module\.css$/
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
       },
     ]
   },
@@ -39,7 +61,19 @@ module.exports = {
       template: './src/index.html',
     }),
     new VueLoaderPlugin(),
-    new GenerateSW(),
+    new WorkboxPlugin.GenerateSW({
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+      runtimeCaching: [{
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'images',
+          expiration: {
+            maxEntries: 10,
+          },
+        },
+      }],
+    }),
     new webpack.HotModuleReplacementPlugin(),
   ]
 };

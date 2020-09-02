@@ -19,7 +19,7 @@
     import DesktopMenu from "./DesktopMenu.vue";
     export default {
         data(){ return {
-          CurrentPage: "home", 
+          CurrentPage: "home"
         }},
         components: {
             CollapsibleCategory,

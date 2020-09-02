@@ -3,14 +3,14 @@ export default {
         categories: {
             "Root": {
                 type: "category",
-                name: "root", 
+                name: "root",
                 children: ["Test Category"]
             },
             "Test Category": {
                 type: "category",
                 name: "Test Category",
                 children: [
-                    "Test Category/Test Subcategory", 
+                    "Test Category/Test Subcategory",
                     "Test Entry"
                 ]
             },

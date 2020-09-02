@@ -5,7 +5,11 @@
 
       <template v-if="CurrentPage == 'home'">
         <h3>Product Categories</h3>
-        <collapsible-category :categoryName="'Root'"></collapsible-category>
+        <collapsible-category
+              v-for="entry in categories['Root'].children"
+              :key="categories[entry].name"
+              :categoryName="categories[entry].name"
+          ></collapsible-category>
       </template>
       <template v-else-if="CurrentPage == 'contacts'">
         <h3>Contacts</h3>

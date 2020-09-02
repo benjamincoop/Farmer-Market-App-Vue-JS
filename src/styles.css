@@ -64,25 +64,25 @@
   .sidenav a {font-size: 18px;}
 }
 
-#menu {
+.banner {
   background: #002569;
   height: 50px;
 }
 
-#menu_list {
+.banner_list {
   list-style-type: none;
   display: inline-block;
   top: -20px;
   position: relative;
 }
 
-#menu_list li {
+.banner_list li {
   display: inline-block;
   color: white;
   margin-right: 15px;
 }
 
-#kda_logo {
+.kda_logo {
   height: 40px;
   margin: 5px;
 }

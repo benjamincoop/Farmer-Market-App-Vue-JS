@@ -1,24 +1,19 @@
 <template>
-    <div id="app">
-      <desktop-menu></desktop-menu>
-      <sliding-menu></sliding-menu>
-
-      <template v-if="CurrentPage == 'home'">
-        <h3>Product Categories</h3>
-        <collapsible-category
-              v-for="entry in categories['Root'].children"
-              :key="categories[entry].name"
-              :categoryName="categories[entry].name"
-          ></collapsible-category>
-      </template>
-      <template v-else-if="CurrentPage == 'contacts'">
-        <h3>Contacts</h3>
-      </template>
-    </div>
+  <div id="app" class="full-height">
+    <div v-if="!online" class="alert">You are currently offline!</div>
+    <desktop-menu class='desktop-only'></desktop-menu>
+    <sliding-menu class='mobile-only'></sliding-menu>
+    <template v-if="CurrentPage == 'home'">
+      <product-list-page></product-list-page>
+    </template>
+    <template v-else-if="CurrentPage == 'contacts'">
+      <h3>Contacts</h3>
+    </template>
+  </div>
 </template>
 
 <script>
-    import CollapsibleCategory from "./CollapsibleCategory.vue";
+    import ProductListPage from "./ProductListPage.vue"
     import SlidingMenu from "./SlidingMenu.vue";
     import DesktopMenu from "./DesktopMenu.vue";
     export default {
@@ -26,10 +21,21 @@
           CurrentPage: "home"
         }},
         components: {
-            CollapsibleCategory,
+            ProductListPage,
             SlidingMenu,
             DesktopMenu,
         },
+        computed: {
+          online() {
+            return navigator.onLine;
+          }
+        },
     };
 </script>
-<style></style>
+<style>
+.alert {
+  background-color: darkred;
+  color: white;
+  padding: 5px;
+}
+</style>

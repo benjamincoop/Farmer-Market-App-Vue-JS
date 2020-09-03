@@ -58,6 +58,7 @@
   width: 60%;
   top: -40px;
   text-align: center;
+  transition: top 1s;
 }
 .alert {
   background-color: darkred;

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <banner-menu></banner-menu>
+      <desktop-menu></desktop-menu>
       <sliding-menu></sliding-menu>
 
       <template v-if="CurrentPage == 'home'">
@@ -16,7 +16,7 @@
 <script>
     import CollapsibleCategory from "./CollapsibleCategory.vue";
     import SlidingMenu from "./SlidingMenu.vue";
-    import BannerMenu from "./BannerMenu.vue";
+    import DesktopMenu from "./DesktopMenu.vue";
     export default {
         data(){ return {
           CurrentPage: "home"
@@ -24,7 +24,7 @@
         components: {
             CollapsibleCategory,
             SlidingMenu,
-            BannerMenu,
+            DesktopMenu,
         },
     };
 </script>

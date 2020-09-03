@@ -11,4 +11,4 @@ registerRoute(
 registerRoute(
   new RegExp('\\.css$'),
   new StaleWhileRevalidate(),
-);
+); 

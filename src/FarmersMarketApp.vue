@@ -10,6 +10,9 @@
     <template v-else-if="CurrentPage == 'contacts'">
       <h3>Contacts</h3>
     </template>
+    <template v-else-if="CurrentPage == 'reporting'">
+      <reporting-page></reporting-page>
+    </template>
     <button style="position: absolute; bottom: 10px;" v-on:click="alert">Test Alert</button>
   </div>
 </template>
@@ -18,6 +21,7 @@
     import ProductListPage from "./ProductListPage.vue"
     import SlidingMenu from "./SlidingMenu.vue";
     import DesktopMenu from "./DesktopMenu.vue";
+    import ReportingPage from "./ReportingPage.vue";
     export default {
         data(){ return {
           CurrentPage: "home"
@@ -26,6 +30,7 @@
             ProductListPage,
             SlidingMenu,
             DesktopMenu,
+            ReportingPage,
         },
         computed: {
           online() {

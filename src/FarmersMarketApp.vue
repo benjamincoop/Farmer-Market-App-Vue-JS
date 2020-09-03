@@ -9,6 +9,9 @@
     <template v-else-if="CurrentPage == 'contacts'">
       <h3>Contacts</h3>
     </template>
+    <template v-else-if="CurrentPage == 'favorites'">
+      <favorite-list></favorite-list>
+    </template>
   </div>
 </template>
 
@@ -16,6 +19,7 @@
     import ProductListPage from "./ProductListPage.vue"
     import SlidingMenu from "./SlidingMenu.vue";
     import DesktopMenu from "./DesktopMenu.vue";
+    import FavoriteList from "./FavoriteList.vue";
     export default {
         data(){ return {
           CurrentPage: "home"
@@ -24,6 +28,7 @@
             ProductListPage,
             SlidingMenu,
             DesktopMenu,
+            FavoriteList
         },
         computed: {
           online() {

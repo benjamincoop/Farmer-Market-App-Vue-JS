@@ -12,6 +12,7 @@
                     </div>
                     <p>{{ categories[currentEntry].description }}</p>
                     <p>Examples: {{ categories[currentEntry].examples }}</p>
+                    <button @click.self="OnFavoriteClick(categories[currentEntry].name)">Favorite</button>
                 </div>
             </div>
         </div>
@@ -26,7 +27,7 @@ export default {
         ...mapGetters(['categories', 'currentEntry']),
     },
     methods: {
-        ...mapMutations(['setCurrentEntry']),
+        ...mapMutations(['setCurrentEntry','AddToFavorites']),
         closeEntry() {
             this.setCurrentEntry(null);
         },
@@ -39,6 +40,11 @@ export default {
             }
             return classes;
         },
+        OnFavoriteClick(entryName) {
+            if (this.categories[entryName].type === 'entry') {
+                this.AddToFavorites(entryName);
+            }
+        }
     },
 }
 </script>

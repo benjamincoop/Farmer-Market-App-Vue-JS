@@ -27,7 +27,8 @@ export default {
                 license: false,
                 temperatureControl: false,
                 snapEligible: false,
-                testingRequired: false
+                testingRequired: false,
+                favored: false
             },
             "Test Entry 2": {
                 type: "entry",
@@ -37,10 +38,12 @@ export default {
                 license: true,
                 temperatureControl: true,
                 snapEligible: true,
-                testingRequired: true
-            },
+                testingRequired: true,
+                favored: false
+            },            
         },
         currentEntry: null,
+        favorites: [],
     },
     getters: {
         categories(state) {
@@ -49,11 +52,13 @@ export default {
         currentEntry(state) {
             return state.currentEntry;
         },
+        favorites: state=>state.favored,
     },
     mutations: {
         setCurrentEntry(state, currentEntry) {
             state.currentEntry = currentEntry
         },
+        AddToFavorites(state, name) { state.favorites.push(name) },
     },
 
 }

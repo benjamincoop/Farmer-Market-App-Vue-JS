@@ -4,9 +4,10 @@
       <img id="kda_logo" src="../KDALogo_White-Gold.png">
       <ul id="menu_list">
         <li>Home</li>
-        <li>Contacts</li>
+        <li>About</li>
         <li>Favorites</li>
-        <li>Reporting</li>
+        <li>Contact Us</li>
+        <li>Report an Issue</li>
       </ul>
     </div>
   </div>

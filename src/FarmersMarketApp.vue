@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+      <desktop-menu></desktop-menu>
       <sliding-menu></sliding-menu>
 
       <template v-if="CurrentPage == 'home'">
@@ -7,8 +8,7 @@
         <collapsible-category :categoryName="'Root'"></collapsible-category>
       </template>
       <template v-else-if="CurrentPage == 'contacts'">
-        
-			<KeyContacts></KeyContacts>
+        <KeyContacts></KeyContacts>
       </template>
     </div>
 </template>
@@ -16,6 +16,7 @@
 <script>
     import CollapsibleCategory from "./CollapsibleCategory.vue";
     import SlidingMenu from "./SlidingMenu.vue";
+    import DesktopMenu from "./DesktopMenu.vue";
 	import KeyContacts from "./KeyContacts.vue";
     export default {
         data(){ return {
@@ -24,6 +25,7 @@
         components: {
             CollapsibleCategory,
             SlidingMenu,
+            DesktopMenu,
 			KeyContacts,
         },
     };

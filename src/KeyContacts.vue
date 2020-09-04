@@ -1,8 +1,8 @@
+
 <template>
-	
-	<div>
-	<h2 class="keyContactsTitle">Key Contacts</h2>
-		<table id="keyContscts" class ="tableHead">
+	<div >
+		<h3 class="keyContactsTitle">Key Contacts</h3>
+			<table id="keyContscts" >
 						<thead >
 							<tr >
 								<th >Questions on?</th>
@@ -182,8 +182,8 @@
 								</th>
 								<th>785-532-6173</th>
 							</tr>
-			</tbody>
-		 </table> 
+						</tbody>
+					  </table> 
 					  
 	</div>
 </template>

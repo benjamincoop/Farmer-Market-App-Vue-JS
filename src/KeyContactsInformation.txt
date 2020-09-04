@@ -1,0 +1,5 @@
+Description: Food Safety licensing and inspection,
+WhoToContact: KDA Food Safety and Lodging program,
+Website: agriculture.ks.gov/foodsafety,
+Email: kda.fsl@ks.gov,
+PhoneNumber: 785-564-6767,

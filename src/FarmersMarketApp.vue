@@ -1,9 +1,9 @@
 <template>
-    <div id="app">
+    <div id="app" >
       <desktop-menu></desktop-menu>
       <sliding-menu></sliding-menu>
 
-      <template v-if="CurrentPage == 'home'">
+      <template v-if="CurrentPage == 'home'" >
         <h3>Product Categories</h3>
         <collapsible-category :categoryName="'Root'"></collapsible-category>
       </template>
@@ -30,4 +30,6 @@
         },
     };
 </script>
-<style></style>
+<style>
+	
+</style>

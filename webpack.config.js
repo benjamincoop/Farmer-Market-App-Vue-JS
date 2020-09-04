@@ -12,6 +12,10 @@ module.exports = {
         test: /\.txt$/i,
         use: 'raw-loader',
       },
+	  {
+		test: /\.json$/, 
+		loader: 'json-loader',
+	  },
       { 
         test: /\.js$/,
         use: 'babel-loader'

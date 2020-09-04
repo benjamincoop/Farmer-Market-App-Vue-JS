@@ -9,6 +9,7 @@
     font-size: 15px;
     border: 1px solid #F1AD02;
     margin: 5px 0;
+	
   }
   
   .active, .collapsible:hover {
@@ -140,8 +141,8 @@ th{
 }
 
 .tableTextPaddingDescription{
-	padding:7px;
-	padding-left:0;
+	padding-bottom:7px;
+	
 	font-weight:bold;
 }
 
@@ -153,6 +154,7 @@ th{
 
 .bodyWidth{
 	width: 250px;
+	
 }
 
 .keyContactsTitle{
@@ -163,3 +165,9 @@ th{
 .menuButton{
 	background-color : #002569;
 }
+
+body{
+	 background: linear-gradient(#fff, #f1ad02, #002569);
+}
+
+

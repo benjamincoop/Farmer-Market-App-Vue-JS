@@ -5,7 +5,7 @@
       <ul id="menu_list">
         <li v-on:click.self="openHomePage()">Home</li>
         <li v-on:click.self="openKeyContactsPage()">
-			contacts
+			More Information
 		</li>
         <li>Favorites</li>
         <li>Reporting</li>

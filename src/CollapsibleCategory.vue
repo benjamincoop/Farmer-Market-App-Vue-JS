@@ -1,7 +1,7 @@
 <template>
     
-    <div>
-        <button class="collapsible" v-on:click.self="open = !open">{{ categories[categoryName].name }}</button>
+    <div >
+        <button  class="collapsible" v-on:click.self="open = !open">{{ categories[categoryName].name }}</button>
         
         <div v-if="open" class="content">
             <ul v-if="categories[categoryName].children.length !== 0">
@@ -10,6 +10,7 @@
                         v-if="categories[entry].type === 'category'"
                         :key="categories[entry].name"
                         :categoryName="categories[entry].name"
+						
                     ></collapsible-category>
                     
                     <li
@@ -28,6 +29,9 @@
 import {mapGetters} from 'Vuex';
 
 export default {
+	
+   
+
     name: "collapsible-category",
     data() {
         return {
@@ -47,4 +51,5 @@ export default {
 </script>
 
 <style>
+	
 </style>

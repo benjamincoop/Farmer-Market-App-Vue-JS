@@ -4,19 +4,19 @@
     "description": "Weather forecast information",
     "icons": [
       {
-        "src": "/market128.png",
+        "src": "./market128.png",
         "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "/market512.png",
+        "src": "./market512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
-    "start_url": "/dist/index",
+    "start_url": "./dist/index",
     "background_color": "#f1f1f1",
     "display": "standalone",
-    "scope": "/dist",
+    "scope": "./dist",
     "theme_color": "#3367D6"
 }

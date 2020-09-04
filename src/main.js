@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 import FarmersMarketStore from './farmers_market_store.js'
 import FarmersMarketApp from './FarmersMarketApp.vue';
 import '../service-worker.js'
+import '../market128.png';
+import '../market512.png';
 import './styles.css';
 
 Vue.use(Vuex);

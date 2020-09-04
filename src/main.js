@@ -23,6 +23,6 @@ new Vue({
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('service-worker.js', { scope: "/" });
+    navigator.serviceWorker.register('service-worker.js', { scope: "./dist/" });
   });
 }

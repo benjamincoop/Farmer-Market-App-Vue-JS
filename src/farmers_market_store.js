@@ -43,6 +43,7 @@ export default {
             },            
         },
         currentEntry: null,
+        currentPage: "home",
         favorites: [],
     },
     getters: {
@@ -52,13 +53,21 @@ export default {
         currentEntry(state) {
             return state.currentEntry;
         },
-        favorites: state=>state.favored,
+        favorites: state=>state.favorites,
+        currentPage: state=>state.currentPage,
     },
     mutations: {
         setCurrentEntry(state, currentEntry) {
             state.currentEntry = currentEntry
         },
-        AddToFavorites(state, name) { state.favorites.push(name) },
+        setCurrentPage(state, currentPage){
+            state.currentPage = currentPage
+        },
+        AddToFavorites(state, currentEntry) { 
+            if(state.favorites.indexOf(currentEntry) === -1)
+                state.favorites.push(currentEntry);
+        },
+        RemoveFromFavorites(state, entry) { state.favorites.splice(state.favorites.indexOf(entry), 1) },
     },
 
 }

@@ -27,9 +27,6 @@
     import FavoriteList from "./FavoriteList.vue";
     import ReportingPage from "./ReportingPage.vue";
     export default {
-        data(){ return {
-          CurrentPage: "home"
-        }},
         components: {
             ProductListPage,
             SlidingMenu,
@@ -40,7 +37,10 @@
         computed: {
           online() {
             return navigator.onLine;
-          }
+          },          
+          CurrentPage() {
+              return this.$store.getters.currentPage
+          },
         },
         methods: {
           alert: function (event) {

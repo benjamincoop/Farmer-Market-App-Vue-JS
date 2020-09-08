@@ -10,16 +10,13 @@
     <template v-else-if="CurrentPage == 'contacts'">
       <h3>Contacts</h3>
     </template>
-<<<<<<< HEAD
     <template v-else-if="CurrentPage == 'favorites'">
       <favorite-list></favorite-list>
     </template>
-=======
     <template v-else-if="CurrentPage == 'reporting'">
       <reporting-page></reporting-page>
     </template>
     <button style="position: absolute; bottom: 10px;" v-on:click="alert">Test Alert</button>
->>>>>>> 488aa40e73b1083ea84cdb71f22515b2ea58630c
   </div>
 </template>
 
@@ -27,29 +24,23 @@
     import ProductListPage from "./ProductListPage.vue"
     import SlidingMenu from "./SlidingMenu.vue";
     import DesktopMenu from "./DesktopMenu.vue";
-<<<<<<< HEAD
     import FavoriteList from "./FavoriteList.vue";
-=======
     import ReportingPage from "./ReportingPage.vue";
->>>>>>> 488aa40e73b1083ea84cdb71f22515b2ea58630c
     export default {
-        data(){ return {
-          CurrentPage: "favorites"
-        }},
         components: {
             ProductListPage,
             SlidingMenu,
             DesktopMenu,
-<<<<<<< HEAD
-            FavoriteList
-=======
+            FavoriteList,
             ReportingPage,
->>>>>>> 488aa40e73b1083ea84cdb71f22515b2ea58630c
         },
         computed: {
           online() {
             return navigator.onLine;
-          }
+          },          
+          CurrentPage() {
+              return this.$store.getters.currentPage
+          },
         },
         methods: {
           alert: function (event) {

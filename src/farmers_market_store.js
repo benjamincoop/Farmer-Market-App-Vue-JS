@@ -43,6 +43,7 @@ export default {
             },            
         },
         currentEntry: null,
+        currentPage: "favorites",
         favorites: ["Test Entry 2", "Test Entry"],
     },
     getters: {
@@ -53,12 +54,17 @@ export default {
             return state.currentEntry;
         },
         favorites: state=>state.favorites,
+        currentPage: state=>state.currentPage,
     },
     mutations: {
         setCurrentEntry(state, currentEntry) {
             state.currentEntry = currentEntry
         },
+        setCurrentPage(state, currentPage){
+            state.currentPage = currentPage
+        },
         AddToFavorites(state, currentEntry) { state.favorites.push(currentEntry) },
+        RemoveFromFavorites(state, entry) { state.favorites.splice(this.favorites.indexOf(entry), 1) },
     },
 
 }

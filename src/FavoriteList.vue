@@ -22,6 +22,7 @@
 
 
 <script>
+import {mapMutations} from 'Vuex';
 export default {
     name: "favorite-list",
     computed: {
@@ -33,6 +34,7 @@ export default {
         }
     },
     methods: {
+        ...mapMutations(['RemoveFromeFavorites']),
         requirementsClasses(isRequired) {
             var classes = 'inline-4 ';
             if (isRequired) {

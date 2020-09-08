@@ -22,7 +22,7 @@
     import FavoriteList from "./FavoriteList.vue";
     export default {
         data(){ return {
-          CurrentPage: "home"
+          CurrentPage: "favorites"
         }},
         components: {
             ProductListPage,

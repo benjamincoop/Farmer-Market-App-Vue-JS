@@ -43,7 +43,7 @@ export default {
             },            
         },
         currentEntry: null,
-        favorites: [],
+        favorites: ["Test Entry 2", "Test Entry"],
     },
     getters: {
         categories(state) {
@@ -52,13 +52,13 @@ export default {
         currentEntry(state) {
             return state.currentEntry;
         },
-        favorites: state=>state.favored,
+        favorites: state=>state.favorites,
     },
     mutations: {
         setCurrentEntry(state, currentEntry) {
             state.currentEntry = currentEntry
         },
-        AddToFavorites(state, name) { state.favorites.push(name) },
+        AddToFavorites(state, currentEntry) { state.favorites.push(currentEntry) },
     },
 
 }

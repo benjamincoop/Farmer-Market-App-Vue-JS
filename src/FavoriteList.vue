@@ -1,12 +1,22 @@
 <template>
-    <div class="container">
-        <button class="favorite" v-on:click.self="open = !open">Favorites</button>
-        
-        <div v-if="categories[categoryName].children.length !== 0 && open" class="content">
-            <template v-for="entry in favorites">
-                    {{ categories[entry].name }}
-            </template>
-        </div>
+    <div>
+        <h1>Favorites</h1>
+        <ul>
+        <li v-for="entry in favorites" v-bind:key="entry.id">
+            <div>
+                <h2>{{ categories[entry].name }}</h2>
+                    <div class='inline-container'>
+                        <div :class='requirementsClasses(categories[entry].license)'>Requires License</div>
+                        <div :class='requirementsClasses(categories[entry].temperatureControl)'>Requires Temperature Control</div>
+                        <div :class='requirementsClasses(categories[entry].testingRequired)'>Requires Testing</div>
+                        <div :class='requirementsClasses(categories[entry].snapEligible)'>SNAP Eligible</div>
+                    </div>
+                    <p>{{ categories[entry].description }}</p>
+                    <p>Examples: {{ categories[entry].examples }}</p>
+                    <button @click.self="OnUnfavoriteClick(entry)">Unfavorite</button>
+            </div>
+        </li>
+        </ul>
     </div>
 </template>
 
@@ -14,17 +24,30 @@
 <script>
 export default {
     name: "favorite-list",
-    components: {
-        CategoryEntry,
-    },
-    data() {
-        return {
-            open: false,
-        };
-    },
     computed: {
-        ...mapGetters(['categories', 'favorites']),
+        favorites() {
+            return this.$store.getters.favorites
+        },
+        categories() {
+            return this.$store.getters.categories
+        }
     },
+    methods: {
+        requirementsClasses(isRequired) {
+            var classes = 'inline-4 ';
+            if (isRequired) {
+                classes = classes.concat(' required');
+            } else {
+                classes = classes.concat(' not-required');
+            }
+            return classes;
+        },
+        OnUnfavoriteClick(entryName) {
+            if (this.categories[entryName].type === 'entry') {
+                this.RemoveFromFavorites
+            }
+        }
+    }
 }
 </script>
 

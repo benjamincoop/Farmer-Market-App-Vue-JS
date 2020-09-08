@@ -2,8 +2,9 @@
   <div id="sliding-menu">
   <div id="SideMenu" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" v-on:click.self="closeNav()">&times;</a>
-      <a href="#">Product List</a>
-      <a href="#">More Information</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Favorites</a>
       <a href="#">Contact Us</a>
       <a href="#">Report an Issue</a>
   </div>

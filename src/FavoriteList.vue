@@ -34,7 +34,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['RemoveFromeFavorites']),
+        ...mapMutations(['RemoveFromFavorites']),
         requirementsClasses(isRequired) {
             var classes = 'inline-4 ';
             if (isRequired) {
@@ -46,7 +46,7 @@ export default {
         },
         OnUnfavoriteClick(entryName) {
             if (this.categories[entryName].type === 'entry') {
-                this.RemoveFromFavorites
+                this.RemoveFromFavorites(entryName)
             }
         }
     }

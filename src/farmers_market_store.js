@@ -64,7 +64,7 @@ export default {
             state.currentPage = currentPage
         },
         AddToFavorites(state, currentEntry) { state.favorites.push(currentEntry) },
-        RemoveFromFavorites(state, entry) { state.favorites.splice(this.favorites.indexOf(entry), 1) },
+        RemoveFromFavorites(state, entry) { state.favorites.splice(state.favorites.indexOf(entry), 1) },
     },
 
 }

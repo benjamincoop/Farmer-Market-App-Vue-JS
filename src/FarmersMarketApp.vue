@@ -21,7 +21,7 @@
 </template>
 
 <script>
-    import ProductListPage from "./ProductListPage.vue"
+    import ProductListPage from "./ProductListPage.vue";
     import SlidingMenu from "./SlidingMenu.vue";
     import DesktopMenu from "./DesktopMenu.vue";
     import FavoriteList from "./FavoriteList.vue";

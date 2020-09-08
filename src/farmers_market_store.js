@@ -43,8 +43,8 @@ export default {
             },            
         },
         currentEntry: null,
-        currentPage: "favorites",
-        favorites: ["Test Entry 2", "Test Entry"],
+        currentPage: "home",
+        favorites: [],
     },
     getters: {
         categories(state) {

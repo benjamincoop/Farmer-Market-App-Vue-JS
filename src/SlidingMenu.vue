@@ -2,11 +2,11 @@
   <div id="sliding-menu">
   <div id="SideMenu" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" v-on:click.self="closeNav()">&times;</a>
-      <a href="#" @click="onChangePage('home')">Home</a>
-      <a href="#" @click="onChangePage('about')">About</a>
-      <a href="#" @click="onChangePage('favorites')">Favorites</a>
-      <a href="#" @click="onChangePage('contacts')">Contact Us</a>
-      <a href="#" @click="onChangePage('reporting')">Report an Issue</a>
+      <a href="#" @click="onChangePage('home'); closeNav()">Home</a>
+      <a href="#" @click="onChangePage('about'); closeNav()">About</a>
+      <a href="#" @click="onChangePage('favorites'); closeNav()">Favorites</a>
+      <a href="#" @click="onChangePage('contacts'); closeNav()">Contact Us</a>
+      <a href="#" @click="onChangePage('reporting'); closeNav()">Report an Issue</a>
   </div>
   <div id="menu">
     <span style="font-size: 30px; cursor: pointer; color: white; position: relative; top: 2px; margin: 5px;" v-on:click.self="openNav()">&#9776;</span>
